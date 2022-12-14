@@ -1,0 +1,43 @@
+#cloud-config
+
+groups:
+  - docker
+
+users:
+  - name: ubuntu
+    ssh_import_id:
+      - gh:wagneralbjr
+    groups:
+      - sudo
+      - users
+      - docker
+    shell: /usr/bin/bash
+
+ssh_pwauth: false
+
+package_update: true
+package_upgrade: true
+
+
+apt:
+  sources:
+    docker.list:
+      source: deb https://download.docker.com/linux/ubuntu $RELEASE stable
+      keyid: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+    kubernetes.list:
+      source: deb https://apt.kubernetes.io/ kubernetes-xenial main
+      keyid: 59FE0256827269DC81578F928B57C5C2836F4BEB
+
+packages:
+  - docker-ce
+  - docker-ce-cli
+  - kubectl
+
+  - zsh
+  - git
+  - build-essential
+
+runcmd:
+  - sudo apt install -y docker-ce docker-ce-cli git build-essential
+  - echo "done"
+   

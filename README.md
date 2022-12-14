@@ -22,3 +22,8 @@ https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-provider/01-
 
 
 Edited file ~/tf-provider/provider.tf
+
+
+#  trying out to up the arm machine, following this github
+
+https://github.com/stealthybox/tf-oci-arm/blob/main/compute.tf
