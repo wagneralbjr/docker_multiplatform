@@ -1,0 +1,7 @@
+Compartment Name: wagneralbjr
+Compartment ocid : ocid1.tenancy.oc1..aaaaaaaa3fh2hulr72qem7egpt3odzero7mqj3oyqqvgibvacfo4mebfnsja
+Public Subnet ID : ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaeaa7fm5f6qipjf4f3arfrc5ekntbqqfx33kdges2uuslq6i6hg3a
+ubuntu 20.04 ocid : ocid1.image.oc1.sa-saopaulo-1.aaaaaaaafkbto4tg6kfbdyi6zvf43di3x4gdei7zeb2n4imi5k5eckegozkq
+Shape: VM.Standard3.Flex
+Private Key: /home/wagner/.oci/oci_api_key.pem
+Public key: /home/wagner/.oci/oci_api_key_public.pem

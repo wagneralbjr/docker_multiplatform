@@ -8,10 +8,17 @@ ls /proc/sys/fs/binfmt_misc/
 # how to build as multiarch
 docker build --platform=linux/amd64,linux/arm64 .
 
-Resources
+#Resources
 
 https://stackoverflow.com/questions/72444103/what-does-running-the-multiarch-qemu-user-static-does-before-building-a-containe
 
 
 https://docs.podman.io/en/latest/markdown/podman-build.1.html
+## resources
+https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/tf-provider/01-summary.htm
 
+
+#terraform part
+
+
+Edited file ~/tf-provider/provider.tf
