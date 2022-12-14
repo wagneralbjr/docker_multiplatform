@@ -8,6 +8,9 @@ data "oci_core_images" "ampere-ubuntu-images" {
 }
 
 
+data  "template_file" "user_data"{
+    template = file("./userdata.yaml")
+}
 
 
 
@@ -33,13 +36,11 @@ resource "oci_core_instance" "python-hello" {
         assign_public_ip = true
         subnet_id = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaeaa7fm5f6qipjf4f3arfrc5ekntbqqfx33kdges2uuslq6i6hg3a"
     }
+    #user_data = data.template_file.user_data.rendered
     metadata = {
        
-        "user_data" = base64encode(
-        templatefile(
-            "userdata.tpl.yaml", {}
-        )),
-        ssh_authorized_keys = file("/home/wagner/.ssh/id_rsa.pub"),
+        user_data = filebase64("userdata.yaml"),
+        #ssh_authorized_keys = file("/home/wagner/.ssh/id_rsa.pub"),
     
     } 
     preserve_boot_volume = false
