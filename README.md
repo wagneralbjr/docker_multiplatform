@@ -8,6 +8,12 @@ ls /proc/sys/fs/binfmt_misc/
 # how to build as multiarch
 docker build --platform=linux/amd64,linux/arm64 .
 
+# how to login to oracle docker registry
+https://cloud.oracle.com/registry/containers/
+docker login sa-saopaulo-1.ocir.io
+
+
+
 #Resources
 
 https://stackoverflow.com/questions/72444103/what-does-running-the-multiarch-qemu-user-static-does-before-building-a-containe
