@@ -1,0 +1,26 @@
+#cloud-config
+
+groups:
+  - docker
+
+users:
+  - name: wagner
+    ssh_import_id:
+      - gh:wagneralbjr
+    groups:
+      - sudo
+      - users
+      - docker
+packages:
+  - docker-ce
+  - docker-ce-cli
+  - kubectl
+  - zsh
+  - git
+  - build-essential
+
+runcmd:
+  - [sudo, apt, install, -y, docker-ce, docker-ce-cli, git, build-essential]
+  - [echo, "done", >>, /tmp/teste.txt]
+
+   
